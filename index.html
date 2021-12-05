@@ -29,7 +29,7 @@
                 <div class="page-content">
 
                     <div class="title-cont">
-                        <a href="#">
+                        <a>
                             <h3 class="inner">
                                 Specialist Petri Network Simulation
                             </h3>
@@ -96,9 +96,9 @@
                                             }
                                         }],
                                         "marking": {
-                                            "Free": 1,
-                                            "Busy": 1,
-                                            "Docu": 1,
+                                            "Free": 0,
+                                            "Busy": 0,
+                                            "Docu": 0,
                                         }
                                     }
                                 }
@@ -128,7 +128,7 @@
 
                     </div>
                     <div class="title-cont">
-                        <a href="#">
+                        <a>
                             <h3 class="inner">
                                 Patient Petri Network Simulation
                             </h3>
@@ -139,7 +139,7 @@
                             <!-- insert net here -->
                             <petrinet-viewer id="Patient"></petrinet-viewer>
                             <script>
-                                var netInfo = {
+                                var net2Info = {
                                     "title": "Patient",
                                     "net": {
                                         "places": [{
@@ -187,7 +187,9 @@
                                             }
                                         }],
                                         "marking": {
-
+                                            "Wait": 0,
+                                            "Inside": 0,
+                                            "Done": 0
                                         }
                                     },
                                     "xShift": -0.5
@@ -198,8 +200,7 @@
                                     netInfo.net.transitions[i].x += netInfo.xShift || 0;
                                     netInfo.net.transitions[i].y += netInfo.yShift || 0;
                                 }
-
-                                renderNet("#" + title, netInfo);
+                                renderNet("#" + title, net2Info);
                             </script>
                         </div>
                         <div class="vert-align mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
@@ -212,7 +213,7 @@
                         </div>
                     </div>
                     <div class="title-cont" id="Arcs">
-                        <a href="#">
+                        <a>
                             <h3 class="inner">
                                 Superimposed Petri Network Simulation
                             </h3>
@@ -221,7 +222,9 @@
                     <div class="content-grid mdl-grid nets-container">
                         <div class="vert-align text-center mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                             <!-- insert net here -->
+
                             <petrinet-viewer id="Superimposed"></petrinet-viewer>
+
                             <script>
                                 var netInfo = {
                                     "title": "Superimposed",
@@ -328,7 +331,7 @@
                             </script>
                         </div>
                         <div class="vert-align mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-
+                            <p>The Superimposed net is the combination of two petrinet above</p>
                         </div>
                     </div>
 
