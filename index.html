@@ -38,10 +38,10 @@
                     <div class="content-grid mdl-grid nets-container">
                         <div class="vert-align text-center mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                             <!-- insert net here -->
-                            <petrinet-viewer id="pn-Intro"></petrinet-viewer>
+                            <petrinet-viewer id="Specialist"></petrinet-viewer>
                             <script>
                                 var netInfo = {
-                                    "title": "Intro",
+                                    "title": "Specialist",
                                     "net": {
                                         "places": [{
                                             "label": "Free",
@@ -102,7 +102,7 @@
                                         }
                                     }
                                 }
-                                var title = "pn-Intro"
+                                var title = "Specialist"
 
                                 for (var i = 0; i < netInfo.net.transitions.length; i++) {
                                     netInfo.net.transitions[i].x += netInfo.xShift || 0;
@@ -137,10 +137,10 @@
                     <div class="content-grid mdl-grid nets-container">
                         <div class="vert-align text-center mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                             <!-- insert net here -->
-                            <petrinet-viewer id="pn-SplitJoin"></petrinet-viewer>
+                            <petrinet-viewer id="Patient"></petrinet-viewer>
                             <script>
                                 var netInfo = {
-                                    "title": "SplitJoin",
+                                    "title": "Patient",
                                     "net": {
                                         "places": [{
                                             "label": "Wait",
@@ -156,7 +156,7 @@
                                             "y": 0
                                         }],
                                         "transitions": [{
-                                            "label": "add",
+                                            "label": "Add",
                                             "x": 0,
                                             "y": 0,
                                             "pre": {
@@ -192,7 +192,7 @@
                                     },
                                     "xShift": -0.5
                                 }
-                                var title = "pn-SplitJoin"
+                                var title = "Patient"
 
                                 for (var i = 0; i < netInfo.net.transitions.length; i++) {
                                     netInfo.net.transitions[i].x += netInfo.xShift || 0;
@@ -203,25 +203,28 @@
                             </script>
                         </div>
                         <div class="vert-align mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-
-
-                            <!-- net description -->
+                            <p>Every patient: who visits a specialist is in one of the following three states:</p>
+                            <ul>
+                                <li>the patient is waiting (state wait, gets value n if there are n patients waiting)</li>
+                                <li> the patient is treated by the specialist (state inside) or</li>
+                                <li>the patient has been treated by the specialist (state done).</li>
+                                <!-- net description -->
                         </div>
                     </div>
                     <div class="title-cont" id="Arcs">
                         <a href="#">
                             <h3 class="inner">
-                                Combined Petri Network Simulation
+                                Superimposed Petri Network Simulation
                             </h3>
                         </a>
                     </div>
                     <div class="content-grid mdl-grid nets-container">
                         <div class="vert-align text-center mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
                             <!-- insert net here -->
-                            <petrinet-viewer id="pn-Arcs"></petrinet-viewer>
+                            <petrinet-viewer id="Superimposed"></petrinet-viewer>
                             <script>
                                 var netInfo = {
-                                    "title": "Arcs",
+                                    "title": "Superimposed",
                                     "net": {
                                         "places": [{
                                             "label": "Free",
@@ -314,7 +317,7 @@
                                         "marking": {}
                                     }
                                 }
-                                var title = "pn-Arcs"
+                                var title = "Superimposed"
 
                                 for (var i = 0; i < netInfo.net.transitions.length; i++) {
                                     netInfo.net.transitions[i].x += netInfo.xShift || 0;
